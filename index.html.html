@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indirect Questions · English IV · Tourism UMSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,800;1,300;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ─── VARIABLES ─────────────────────────────────────── */
+:root {
+  --navy:      #0C1C35;
+  --navy-lt:   #152848;
+  --teal:      #0A7B8A;
+  --teal-lt:   #0D9CAD;
+  --teal-bg:   rgba(10,123,138,0.08);
+  --amber:     #D4861E;
+  --amber-lt:  #F0A83A;
+  --cream:     #F8F5EF;
+  --white:     #FFFFFF;
+  --text:      #1A2233;
+  --text-mid:  #4A5568;
+  --text-muted:#7A8699;
+  --border:    #E2DDD6;
+  --shadow:    rgba(12,28,53,0.10);
+  --shadow-md: rgba(12,28,53,0.18);
+  --green:     #1A6B45;
+  --green-bg:  #D1FAE5;
+  --red:       #9B1C1C;
+  --red-bg:    #FEE2E2;
+  --ex1: #0A7B8A;
+  --ex2: #7B3F00;
+  --ex3: #1A4A6B;
+  --ex4: #4A1A6B;
+  --ex5: #1A6B45;
+  --ex6: #6B1A3A;
+}
+
+/* ─── RESET ──────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text);line-height:1.75;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.2}
+a{color:var(--teal);text-decoration:none}
+
+/* ─── PROGRESS ───────────────────────────────────────── */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right,var(--teal),var(--amber));z-index:999;width:0%;transition:width .1s}
+
+/* ─── HERO ───────────────────────────────────────────── */
+.hero{
+  background:var(--navy);
+  color:#F8F5EF;
+  padding:5rem 2rem 4rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 70% at 15% 50%,rgba(10,123,138,.45) 0%,transparent 65%),
+    radial-gradient(ellipse 50% 60% at 85% 40%,rgba(212,134,30,.25) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-kicker{
+  font-family:'DM Sans',sans-serif;
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--amber-lt);margin-bottom:1.2rem;
+  position:relative;
+}
+.hero h1{
+  font-size:clamp(2.6rem,7vw,5rem);
+  font-weight:800;font-style:italic;
+  color:#F8F5EF;
+  position:relative;
+  margin-bottom:.5rem;
+}
+.hero h1 span{font-style:normal;color:var(--amber-lt)}
+.hero-desc{
+  font-family:'Source Serif 4',serif;
+  font-size:1.05rem;font-style:italic;
+  color:rgba(248,245,239,.65);
+  max-width:540px;margin:.8rem auto 0;
+  position:relative;
+}
+.hero-tags{
+  margin-top:2rem;display:flex;gap:.6rem;
+  justify-content:center;flex-wrap:wrap;
+  position:relative;
+}
+.hero-tag{
+  font-family:'DM Sans',sans-serif;
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.28rem .75rem;
+  border:1px solid rgba(248,245,239,.22);
+  border-radius:2rem;
+  color:rgba(248,245,239,.7);
+}
+/* Boarding-pass stripe */
+.hero-stripe{
+  position:absolute;bottom:0;left:0;right:0;
+  height:6px;
+  background:repeating-linear-gradient(90deg,var(--teal) 0,var(--teal) 18px,transparent 18px,transparent 24px,var(--amber) 24px,var(--amber) 42px,transparent 42px,transparent 48px);
+  opacity:.6;
+}
+
+/* ─── NAV ────────────────────────────────────────────── */
+.sticky-nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--navy);
+  border-bottom:1px solid rgba(248,245,239,.08);
+  padding:0 1.5rem;
+  display:flex;align-items:center;gap:0;
+  overflow-x:auto;scrollbar-width:none;
+}
+.sticky-nav::-webkit-scrollbar{display:none}
+.nav-item{
+  font-family:'DM Sans',sans-serif;
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(248,245,239,.5);
+  padding:.85rem .9rem;white-space:nowrap;
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:all .2s;text-decoration:none;
+}
+.nav-item:hover{color:rgba(248,245,239,.9);text-decoration:none}
+.nav-item.active{color:var(--amber-lt);border-bottom-color:var(--amber-lt)}
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.main{max-width:900px;margin:0 auto;padding:0 1.5rem 5rem}
+
+/* ─── STUDENT ID ─────────────────────────────────────── */
+.student-id-box{
+  background:var(--navy);border-radius:.75rem;
+  padding:2rem 2.2rem;margin:2.5rem 0;
+  position:relative;overflow:hidden;
+}
+.student-id-box::before{
+  content:'✈';
+  position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);
+  font-size:5rem;color:rgba(248,245,239,.04);
+  pointer-events:none;
+}
+.sid-label{
+  font-family:'DM Sans',sans-serif;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber-lt);margin-bottom:.4rem;display:block;
+}
+.student-id-box h3{color:#F8F5EF;font-size:1.2rem;margin-bottom:.5rem}
+.student-id-box p{
+  font-family:'DM Sans',sans-serif;font-size:.82rem;
+  color:rgba(248,245,239,.55);margin-bottom:1.5rem;
+}
+.sid-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+@media(max-width:640px){.sid-grid{grid-template-columns:1fr}}
+.sid-field label{
+  display:block;
+  font-family:'DM Sans',sans-serif;font-size:.7rem;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(248,245,239,.5);margin-bottom:.4rem;
+}
+.sid-field input{
+  width:100%;padding:.7rem .9rem;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:.4rem;color:#F8F5EF;
+  font-family:'DM Sans',sans-serif;font-size:.9rem;
+  transition:border-color .2s,background .2s;
+}
+.sid-field input:focus{outline:none;border-color:var(--amber-lt);background:rgba(255,255,255,.12)}
+.sid-field input::placeholder{color:rgba(248,245,239,.25)}
+.sid-required{color:#EF4444;margin-left:2px}
+
+/* ─── INTRO BOX ──────────────────────────────────────── */
+.intro-box{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:.75rem;padding:2rem 2.2rem;margin:2rem 0;
+  box-shadow:0 2px 16px var(--shadow);
+}
+.intro-box h2{font-size:1.4rem;color:var(--navy);margin-bottom:.8rem}
+.intro-box p{font-size:.95rem;color:var(--text-mid);margin-bottom:.5rem}
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.8rem;margin-top:1.5rem}
+.intro-stat{background:var(--cream);border-radius:.5rem;padding:1rem;text-align:center}
+.intro-stat .num{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:var(--teal);display:block}
+.intro-stat .lbl{font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+
+/* ─── SECTION HEADERS ────────────────────────────────── */
+.section-head{
+  display:flex;align-items:center;gap:1rem;
+  margin:3.5rem 0 1.5rem;
+  padding-bottom:1rem;
+  border-bottom:2px solid var(--border);
+}
+.section-badge{
+  font-family:'DM Sans',sans-serif;font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  padding:.28rem .75rem;border-radius:2rem;color:white;flex-shrink:0;
+}
+.section-head h2{font-size:1.6rem;color:var(--text);flex:1}
+.section-time{font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--text-muted);font-weight:500}
+
+/* ─── GRAMMAR CARDS ──────────────────────────────────── */
+.card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:.75rem;padding:1.8rem 2rem;margin:1.2rem 0;
+  box-shadow:0 2px 12px var(--shadow);
+}
+.card h3{font-size:1.2rem;color:var(--teal);margin-bottom:.8rem}
+.card h4{font-size:1rem;color:var(--navy);margin-bottom:.5rem}
+.card p{font-size:.95rem;margin-bottom:.8rem;color:var(--text)}
+.card p:last-child{margin-bottom:0}
+
+/* ─── RULE BOX ───────────────────────────────────────── */
+.rule-box{
+  background:var(--navy);color:#F8F5EF;
+  border-radius:.75rem;padding:1.8rem 2rem;
+  margin:1.2rem 0;position:relative;overflow:hidden;
+}
+.rule-box::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--teal),var(--amber));
+}
+.rule-num{
+  font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber-lt);margin-bottom:.5rem;display:block;
+}
+.rule-box h3{color:#F8F5EF;font-size:1.15rem;margin-bottom:.8rem}
+.rule-box p{font-size:.92rem;color:rgba(248,245,239,.8);margin-bottom:.8rem}
+.rule-box p:last-child{margin-bottom:0}
+
+/* ─── COMPARISON TABLE ───────────────────────────────── */
+.cmp-table{
+  width:100%;border-collapse:collapse;margin:1.2rem 0;
+  font-size:.88rem;background:var(--white);
+  border-radius:.5rem;overflow:hidden;
+  box-shadow:0 2px 10px var(--shadow);
+}
+.cmp-table thead tr{background:var(--navy);color:#F8F5EF}
+.cmp-table thead th{
+  padding:.8rem 1rem;text-align:left;
+  font-family:'DM Sans',sans-serif;font-size:.72rem;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+}
+.cmp-table tbody tr{border-bottom:1px solid var(--border)}
+.cmp-table tbody tr:last-child{border-bottom:none}
+.cmp-table tbody tr:hover{background:var(--cream)}
+.cmp-table td{padding:.75rem 1rem;vertical-align:top;color:var(--text);font-size:.88rem}
+.cmp-table td:first-child{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.cmp-table td code{
+  background:rgba(10,123,138,.1);color:var(--teal);
+  padding:.1rem .4rem;border-radius:.2rem;
+  font-family:monospace;font-size:.85em;
+}
+.cmp-table td.wrong code{background:var(--red-bg);color:var(--red)}
+.cmp-table td.right code{background:var(--green-bg);color:var(--green)}
+
+/* ─── HIGHLIGHT BOX ──────────────────────────────────── */
+.tip-box{
+  background:rgba(212,134,30,.08);
+  border:1px solid rgba(212,134,30,.3);
+  border-left:4px solid var(--amber);
+  border-radius:0 .5rem .5rem 0;
+  padding:1rem 1.2rem;margin:1rem 0;
+  font-size:.9rem;color:var(--text);
+}
+.tip-box strong{color:var(--amber)}
+.warning-box{
+  background:var(--red-bg);
+  border:1px solid rgba(155,28,28,.25);
+  border-left:4px solid var(--red);
+  border-radius:0 .5rem .5rem 0;
+  padding:1rem 1.2rem;margin:1rem 0;
+  font-size:.88rem;
+}
+.warning-box .wrong{color:var(--red);font-weight:600}
+.warning-box .right{color:var(--green);font-weight:600}
+
+/* ─── PHRASE PILLS ───────────────────────────────────── */
+.phrase-grid{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0;
+}
+.phrase-pill{
+  background:var(--teal-bg);
+  border:1px solid rgba(10,123,138,.25);
+  color:var(--teal);
+  font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;
+  padding:.35rem .85rem;border-radius:2rem;
+  font-style:italic;
+}
+
+/* ─── EXERCISE SECTION ───────────────────────────────── */
+.exercise{
+  background:var(--white);
+  border:2px solid var(--border);
+  border-radius:1rem;
+  margin:2rem 0;overflow:hidden;
+  box-shadow:0 4px 20px var(--shadow-md);
+}
+.exercise-head{
+  padding:1.4rem 2rem;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.ex-label{
+  font-family:'DM Sans',sans-serif;font-size:.62rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  display:block;margin-bottom:.2rem;
+}
+.exercise-head h3{font-size:1.25rem;color:#F8F5EF;margin:0}
+.ex-meta{margin-left:auto;text-align:right;flex-shrink:0}
+.ex-timer-btn{
+  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;
+  background:rgba(248,245,239,.15);border:1px solid rgba(248,245,239,.3);
+  color:rgba(248,245,239,.9);border-radius:.4rem;
+  padding:.35rem .8rem;cursor:pointer;transition:background .2s;
+  display:block;margin-bottom:.25rem;
+}
+.ex-timer-btn:hover{background:rgba(248,245,239,.25)}
+.timer-display{
+  font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;
+  color:var(--amber-lt);margin-top:.2rem;display:none;
+}
+.ex-group{font-family:'DM Sans',sans-serif;font-size:.7rem;color:rgba(248,245,239,.45)}
+.exercise-body{padding:1.8rem 2rem}
+.ex-instructions{
+  font-size:.95rem;color:var(--text-mid);margin-bottom:1.5rem;
+  font-style:italic;
+}
+
+/* ─── EXERCISE ITEMS ─────────────────────────────────── */
+.ex-item{
+  display:flex;gap:1rem;align-items:flex-start;
+  margin-bottom:1.4rem;
+}
+.ex-num{
+  width:1.8rem;height:1.8rem;flex-shrink:0;
+  border-radius:.3rem;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:700;
+  color:white;margin-top:.1rem;
+}
+.ex-content{flex:1}
+.ex-content .stem{
+  font-size:.95rem;color:var(--text);
+  margin-bottom:.6rem;line-height:1.6;
+}
+.ex-content .stem em{color:var(--teal);font-style:normal;font-weight:600}
+.ex-content .prompt{
+  font-size:.85rem;color:var(--text-muted);
+  margin-bottom:.5rem;
+  font-family:'DM Sans',sans-serif;
+}
+
+/* ─── TEXTAREA ───────────────────────────────────────── */
+textarea.ex-answer{
+  width:100%;min-height:80px;
+  padding:.8rem 1rem;
+  border:1px solid var(--border);border-radius:.5rem;
+  background:var(--cream);
+  font-family:'Source Serif 4',serif;font-size:.9rem;
+  color:var(--text);line-height:1.6;resize:vertical;
+  transition:border-color .2s,box-shadow .2s;
+}
+textarea.ex-answer:focus{
+  outline:none;border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(10,123,138,.12);
+}
+textarea.ex-answer::placeholder{color:var(--text-muted);font-style:italic}
+
+/* ─── MULTIPLE CHOICE ────────────────────────────────── */
+.mc-options{display:flex;flex-direction:column;gap:.5rem;margin-top:.4rem}
+.mc-btn{
+  display:flex;align-items:center;gap:.75rem;
+  padding:.7rem 1rem;
+  border:1.5px solid var(--border);border-radius:.5rem;
+  background:var(--cream);cursor:pointer;
+  font-family:'Source Serif 4',serif;font-size:.9rem;
+  color:var(--text);text-align:left;
+  transition:all .2s;
+}
+.mc-btn:hover:not(:disabled){border-color:var(--teal);background:var(--teal-bg)}
+.mc-btn .mc-letter{
+  width:1.6rem;height:1.6rem;flex-shrink:0;
+  background:var(--navy);color:white;
+  border-radius:.25rem;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;
+}
+.mc-btn.correct{border-color:var(--green);background:var(--green-bg)!important}
+.mc-btn.correct .mc-letter{background:var(--green)}
+.mc-btn.wrong-pick{border-color:var(--red);background:var(--red-bg)!important}
+.mc-btn.wrong-pick .mc-letter{background:var(--red)}
+.mc-btn.reveal-correct{border-color:var(--green);background:var(--green-bg)}
+.mc-btn.reveal-correct .mc-letter{background:var(--green)}
+.mc-btn:disabled{cursor:default}
+.mc-feedback{
+  font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;
+  margin-top:.5rem;padding:.4rem .8rem;border-radius:.3rem;
+  display:none;
+}
+.mc-feedback.ok{background:var(--green-bg);color:var(--green)}
+.mc-feedback.err{background:var(--red-bg);color:var(--red)}
+
+/* ─── FILL IN THE BLANK ──────────────────────────────── */
+.fib-wrap{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+.fib-input{
+  width:90px;padding:.4rem .6rem;
+  border:1.5px solid var(--border);border-radius:.35rem;
+  background:var(--cream);
+  font-family:'Source Serif 4',serif;font-size:.9rem;
+  color:var(--text);text-align:center;
+  transition:border-color .2s,box-shadow .2s;
+}
+.fib-input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(10,123,138,.12)}
+.fib-input.correct{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:700}
+.fib-input.wrong{border-color:var(--red);background:var(--red-bg);color:var(--red)}
+.fib-stem{font-size:.9rem;color:var(--text);font-family:'Source Serif 4',serif}
+.check-btn{
+  font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:700;
+  background:var(--teal);color:white;border:none;
+  padding:.5rem 1.2rem;border-radius:.4rem;cursor:pointer;
+  transition:background .2s;margin-top:1rem;
+}
+.check-btn:hover{background:var(--teal-lt)}
+.fib-hint{
+  font-family:'DM Sans',sans-serif;font-size:.75rem;
+  padding:.3rem .6rem;border-radius:.25rem;margin-left:.3rem;display:inline-block;
+}
+.fib-hint.ok{background:var(--green-bg);color:var(--green)}
+.fib-hint.err{background:var(--red-bg);color:var(--red)}
+
+/* ─── SELF EVALUATION ────────────────────────────────── */
+.self-eval{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:.75rem;padding:1.8rem 2rem;margin:2rem 0;
+  box-shadow:0 2px 12px var(--shadow);
+}
+.self-eval h3{font-size:1.2rem;color:var(--navy);margin-bottom:1.2rem}
+.eval-item{
+  display:flex;align-items:center;gap:1rem;
+  padding:.7rem 0;border-bottom:1px solid var(--border);
+}
+.eval-item:last-child{border-bottom:none}
+.eval-text{flex:1;font-size:.9rem;color:var(--text)}
+.eval-emojis{display:flex;gap:.4rem;flex-shrink:0}
+.eval-emoji{
+  width:2.2rem;height:2.2rem;border-radius:50%;
+  border:2px solid var(--border);background:var(--cream);
+  cursor:pointer;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.eval-emoji:hover{border-color:var(--teal);transform:scale(1.15)}
+.eval-emoji.selected{border-color:var(--teal);background:var(--teal-bg);transform:scale(1.1)}
+input[type="hidden"].eval-hidden{display:none}
+
+/* ─── ANSWER KEY ─────────────────────────────────────── */
+.answer-key{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:.75rem;overflow:hidden;margin:2rem 0;
+}
+.ak-head{
+  padding:1.2rem 1.5rem;cursor:pointer;
+  display:flex;align-items:center;gap:.8rem;
+  background:var(--white);border-bottom:1px solid var(--border);
+  user-select:none;transition:background .2s;
+}
+.ak-head:hover{background:var(--cream)}
+.ak-icon{
+  width:2rem;height:2rem;background:var(--navy);color:white;
+  border-radius:.35rem;display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;flex-shrink:0;
+}
+.ak-head h3{font-size:1rem;color:var(--navy);flex:1}
+.ak-arrow{color:var(--text-muted);transition:transform .3s;font-size:.9rem}
+.answer-key.open .ak-arrow{transform:rotate(180deg)}
+.ak-body{display:none;padding:1.5rem}
+.answer-key.open .ak-body{display:block}
+.ak-section{margin-bottom:1.2rem}
+.ak-section h4{
+  font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--teal);
+  margin-bottom:.6rem;
+}
+.ak-section ol{padding-left:1.4rem}
+.ak-section ol li{font-size:.88rem;color:var(--text);margin-bottom:.3rem;line-height:1.5}
+.ak-section ol li code{
+  background:var(--green-bg);color:var(--green);
+  padding:.1rem .4rem;border-radius:.2rem;
+  font-family:monospace;font-size:.85em;
+}
+
+/* ─── SUBMIT PANEL ───────────────────────────────────── */
+.submit-panel{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lt) 100%);
+  border-radius:1rem;padding:2.5rem;margin:2.5rem 0;
+  text-align:center;
+  box-shadow:0 8px 32px rgba(12,28,53,.35);
+  position:relative;overflow:hidden;
+}
+.submit-panel::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(10,123,138,.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+.submit-panel h3{color:#F8F5EF;font-size:1.5rem;margin-bottom:.6rem;position:relative}
+.submit-panel p{
+  font-family:'DM Sans',sans-serif;font-size:.9rem;
+  color:rgba(248,245,239,.6);margin-bottom:1.8rem;
+  max-width:460px;margin-left:auto;margin-right:auto;position:relative;
+}
+.submit-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-submit{
+  font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;
+  background:var(--amber);color:var(--navy);border:none;
+  padding:.85rem 2.4rem;border-radius:.5rem;cursor:pointer;
+  transition:all .2s;letter-spacing:.03em;
+}
+.btn-submit:hover{background:var(--amber-lt);transform:translateY(-1px)}
+.btn-submit:disabled{background:rgba(212,134,30,.4);color:rgba(12,28,53,.4);cursor:not-allowed;transform:none}
+.btn-export-sec{
+  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;
+  background:transparent;color:rgba(248,245,239,.7);
+  border:1px solid rgba(248,245,239,.25);
+  padding:.85rem 1.6rem;border-radius:.5rem;cursor:pointer;transition:all .2s;
+}
+.btn-export-sec:hover{background:rgba(255,255,255,.08);color:#F8F5EF}
+.submit-error{
+  background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);
+  border-radius:.4rem;padding:.7rem 1rem;margin-top:1rem;
+  font-family:'DM Sans',sans-serif;font-size:.82rem;color:#FCA5A5;
+  display:none;position:relative;
+}
+.submit-note{
+  margin-top:1rem;font-family:'DM Sans',sans-serif;
+  font-size:.72rem;color:rgba(248,245,239,.35);position:relative;
+}
+
+/* ─── SUCCESS ────────────────────────────────────────── */
+#successScreen{
+  display:none;position:fixed;inset:0;
+  background:var(--navy);z-index:9999;
+  flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:2rem;
+}
+#successScreen.visible{display:flex}
+.success-icon{font-size:4rem;margin-bottom:1.2rem;animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(0);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+#successScreen h2{color:var(--amber-lt);font-size:2rem;margin-bottom:.6rem}
+#successScreen p{
+  font-family:'DM Sans',sans-serif;color:rgba(248,245,239,.6);
+  font-size:1rem;max-width:460px;line-height:1.6;margin-bottom:.5rem;
+}
+#successScreen .success-name{color:var(--teal-lt);font-style:italic;font-family:'Fraunces',serif;font-size:1.15rem;margin-bottom:2rem}
+.btn-success-close{
+  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;
+  background:rgba(255,255,255,.1);color:rgba(248,245,239,.7);
+  border:1px solid rgba(255,255,255,.2);padding:.7rem 1.8rem;
+  border-radius:.4rem;cursor:pointer;transition:all .2s;margin-top:1rem;
+}
+.btn-success-close:hover{background:rgba(255,255,255,.18);color:#F8F5EF}
+
+/* ─── AUTOSAVE NOTE ──────────────────────────────────── */
+.act-autosave{
+  margin-top:1rem;font-family:'DM Sans',sans-serif;
+  font-size:.75rem;color:var(--text-muted);font-style:italic;
+}
+
+/* ─── BACK TOP ───────────────────────────────────────── */
+.back-top{
+  position:fixed;bottom:2rem;right:2rem;
+  width:2.8rem;height:2.8rem;background:var(--teal);color:white;
+  border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px var(--shadow-md);opacity:0;transition:opacity .3s;z-index:99;
+}
+.back-top.visible{opacity:1}
+
+@media(max-width:640px){
+  .hero{padding:3rem 1.5rem 2.5rem}
+  .exercise-head{flex-direction:column}
+  .ex-meta{margin-left:0;text-align:left}
+  .card{padding:1.2rem 1.4rem}
+  .exercise-body{padding:1.2rem 1.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- SUCCESS SCREEN -->
+<div id="successScreen">
+  <div class="success-icon">✅</div>
+  <h2>Answers submitted!</h2>
+  <p class="success-name" id="successName"></p>
+  <p>Your answers have been received. Your teacher will review them shortly.</p>
+  <p>You can also download a personal copy using the export button at the bottom of the page.</p>
+  <button class="btn-success-close" onclick="document.getElementById('successScreen').classList.remove('visible')">Back to page</button>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-kicker">English IV · Tourism Department · UMSA</p>
+  <h1><span>Indirect</span> Questions</h1>
+  <p class="hero-desc">A polite way to ask — and a powerful tool in tourism and hospitality</p>
+  <div class="hero-tags">
+    <span class="hero-tag">Grammar</span>
+    <span class="hero-tag">B1 Level</span>
+    <span class="hero-tag">6 Exercises</span>
+    <span class="hero-tag">90 minutes</span>
+    <span class="hero-tag">Individual</span>
+  </div>
+  <div class="hero-stripe"></div>
+</header>
+
+<!-- NAV -->
+<nav class="sticky-nav" id="mainNav">
+  <a href="#intro" class="nav-item">Start</a>
+  <a href="#grammar" class="nav-item">Grammar</a>
+  <a href="#ex1" class="nav-item">Ex 1</a>
+  <a href="#ex2" class="nav-item">Ex 2</a>
+  <a href="#ex3" class="nav-item">Ex 3</a>
+  <a href="#ex4" class="nav-item">Ex 4</a>
+  <a href="#ex5" class="nav-item">Ex 5</a>
+  <a href="#ex6" class="nav-item">Ex 6</a>
+  <a href="#selfeval" class="nav-item">Self-check</a>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+<form action="https://formspree.io/f/xlgaqqnl" method="POST" id="mainForm">
+  <input type="hidden" name="_subject" value="New submission · Indirect Questions · English IV Tourism UMSA">
+  <input type="hidden" name="_language" value="en">
+  <p style="display:none"><input name="_gotcha"></p>
+
+  <!-- STUDENT ID -->
+  <section id="intro">
+    <div class="student-id-box">
+      <span class="sid-label">Before you begin</span>
+      <h3>Your details</h3>
+      <p>These will appear alongside your answers when the teacher reviews them. All three fields are required to submit.</p>
+      <div class="sid-grid">
+        <div class="sid-field">
+          <label for="nombre">Full name <span class="sid-required">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="e.g. María Quispe" required>
+        </div>
+        <div class="sid-field">
+          <label for="carnet">Student ID / Carnet <span class="sid-required">*</span></label>
+          <input type="text" id="carnet" name="carnet" placeholder="e.g. 1234567 LP" required>
+        </div>
+        <div class="sid-field">
+          <label for="email">Email <span class="sid-required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="e.g. maria@gmail.com" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-box">
+      <h2>How to use this page</h2>
+      <p>Read the grammar explanation first, then work through the six exercises in order. Your written answers are <strong>saved automatically</strong> as you type. When you finish, click <strong>"Submit my answers"</strong> at the bottom. Exercises 3 and 4 give you <strong>instant feedback</strong> when you check your choices.</p>
+      <p>Estimated time: <strong>90 minutes total</strong>. Each exercise shows a suggested time — use the timer button to track it.</p>
+      <div class="intro-grid">
+        <div class="intro-stat"><span class="num">3</span><span class="lbl">Grammar rules</span></div>
+        <div class="intro-stat"><span class="num">6</span><span class="lbl">Exercises</span></div>
+        <div class="intro-stat"><span class="num">Auto</span><span class="lbl">Feedback (Ex 3 & 4)</span></div>
+        <div class="intro-stat"><span class="num">90'</span><span class="lbl">Total time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       PART 1 — GRAMMAR EXPLANATION
+  ═══════════════════════════════════════════════════ -->
+  <section id="grammar">
+    <div class="section-head">
+      <span class="section-badge" style="background:var(--navy)">Part 1</span>
+      <h2>Grammar Explanation</h2>
+      <span class="section-time">~10 min</span>
+    </div>
+
+    <div class="card">
+      <h3>What are indirect questions?</h3>
+      <p>Indirect questions are a <strong>more polite and formal</strong> way of asking for information. Instead of asking directly, we <em>embed</em> the question inside a phrase. They are very common in professional contexts, with strangers, and in customer-service situations — exactly the contexts you will face in tourism.</p>
+      <p style="margin-bottom:.5rem"><strong>Common introducing phrases:</strong></p>
+      <div class="phrase-grid">
+        <span class="phrase-pill">Could you tell me…?</span>
+        <span class="phrase-pill">Do you know…?</span>
+        <span class="phrase-pill">Would you mind telling me…?</span>
+        <span class="phrase-pill">I was wondering…</span>
+        <span class="phrase-pill">I'd like to know…</span>
+        <span class="phrase-pill">Can you tell me…?</span>
+        <span class="phrase-pill">I'm not sure…</span>
+        <span class="phrase-pill">Do you have any idea…?</span>
+      </div>
+    </div>
+
+    <!-- RULE 1 -->
+    <div class="rule-box">
+      <span class="rule-num">Rule 1</span>
+      <h3>Word order — use statement order, not question order</h3>
+      <p>In a direct question, we invert the subject and auxiliary verb. In an indirect question, we use <strong>statement word order</strong> (subject + verb).</p>
+    </div>
+    <table class="cmp-table">
+      <thead><tr><th>Type</th><th>Direct (question order)</th><th>Indirect (statement order)</th></tr></thead>
+      <tbody>
+        <tr><td>Wh-</td><td><code>Where <u>is</u> the nearest ATM?</code></td><td><code>Could you tell me where the nearest ATM <u>is</u>?</code></td></tr>
+        <tr><td>Wh-</td><td><code>What time <u>does it</u> close?</code></td><td><code>Do you know what time <u>it closes</u>?</code></td></tr>
+        <tr><td>Wh-</td><td><code>How long <u>will it</u> take?</code></td><td><code>Do you have any idea how long <u>it will</u> take?</code></td></tr>
+      </tbody>
+    </table>
+    <div class="warning-box">
+      <p>⚠ <strong>Common mistake:</strong></p>
+      <p class="wrong">✗ Could you tell me where <u>is the station</u>? ← Do NOT keep question order.</p>
+      <p class="right">✓ Could you tell me where <u>the station is</u>? ← Use statement order.</p>
+    </div>
+
+    <!-- RULE 2 -->
+    <div class="rule-box">
+      <span class="rule-num">Rule 2</span>
+      <h3>Yes/No questions — use <em>if</em> or <em>whether</em></h3>
+      <p>When the original question has no question word (a yes/no question), connect the indirect question with <strong>if</strong> or <strong>whether</strong>.</p>
+      <p style="margin-bottom:.3rem">Structure: <strong>Introducing phrase + if / whether + subject + verb</strong></p>
+    </div>
+    <table class="cmp-table">
+      <thead><tr><th>Type</th><th>Direct</th><th>Indirect</th></tr></thead>
+      <tbody>
+        <tr><td>Yes/No</td><td><code>Is the restaurant open on Sundays?</code></td><td><code>Could you tell me <u>if / whether</u> the restaurant is open on Sundays?</code></td></tr>
+        <tr><td>Yes/No</td><td><code>Can you help me?</code></td><td><code>I was wondering <u>if / whether</u> you could help me.</code></td></tr>
+      </tbody>
+    </table>
+
+    <!-- RULE 3 -->
+    <div class="rule-box">
+      <span class="rule-num">Rule 3</span>
+      <h3>Using the past tense for extra politeness</h3>
+      <p>We can make a question even less direct by using a past tense in the introducing phrase. The meaning does not change — it just sounds <strong>softer and more polished</strong>.</p>
+    </div>
+    <table class="cmp-table">
+      <thead><tr><th></th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Past tense</td><td><code>I <u>was wondering</u> if you could give us a table for two.</code></td></tr>
+        <tr><td>Past tense</td><td><code>I <u>wanted</u> to ask whether the package includes breakfast.</code></td></tr>
+        <tr><td>Past tense</td><td><code>How much <u>did</u> you <u>want</u> to spend, sir?</code></td></tr>
+      </tbody>
+    </table>
+
+    <!-- SUMMARY -->
+    <div class="card" style="margin-top:1.5rem">
+      <h3>Key Reminders</h3>
+      <div class="tip-box">
+        <strong>Punctuation:</strong> Indirect questions end with a <strong>?</strong> if the introducing phrase is a question (<em>Could you tell me…?</em>), and with a <strong>.</strong> if it is a statement (<em>I was wondering…</em>).
+      </div>
+      <div class="warning-box" style="margin-top:.8rem">
+        <p class="wrong">✗ Do you know what time <u>does it open</u>?</p>
+        <p class="right">✓ Do you know what time <u>it opens</u>?</p>
+        <p style="margin-top:.4rem;font-size:.85rem">Never use <strong>do / does / did</strong> inside the embedded clause.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 1
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex1">
+    <div class="exercise-head" style="background:var(--ex1)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 1 · Writing</span>
+        <h3>Rewrite the Direct Questions</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t1',10)">▶ Start (10 min)</button>
+        <div class="timer-display" id="t1"></div>
+        <span class="ex-group">~10 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">Rewrite each direct question as an indirect question using the phrase given. Pay attention to word order and if/whether.</p>
+
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">1</div>
+        <div class="ex-content">
+          <p class="stem">Where is the check-in desk? <em>Could you tell me</em></p>
+          <textarea class="ex-answer" id="e1q1" name="e1q1" placeholder="Could you tell me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">2</div>
+        <div class="ex-content">
+          <p class="stem">What time does the tour start? <em>Do you know</em></p>
+          <textarea class="ex-answer" id="e1q2" name="e1q2" placeholder="Do you know …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">3</div>
+        <div class="ex-content">
+          <p class="stem">Is there a pharmacy near here? <em>I was wondering</em></p>
+          <textarea class="ex-answer" id="e1q3" name="e1q3" placeholder="I was wondering …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">4</div>
+        <div class="ex-content">
+          <p class="stem">How much does a return ticket cost? <em>Do you have any idea</em></p>
+          <textarea class="ex-answer" id="e1q4" name="e1q4" placeholder="Do you have any idea …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">5</div>
+        <div class="ex-content">
+          <p class="stem">Can I change my reservation? <em>I'd like to know</em></p>
+          <textarea class="ex-answer" id="e1q5" name="e1q5" placeholder="I'd like to know …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">6</div>
+        <div class="ex-content">
+          <p class="stem">How long will the flight be delayed? <em>Could you tell me</em></p>
+          <textarea class="ex-answer" id="e1q6" name="e1q6" placeholder="Could you tell me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">7</div>
+        <div class="ex-content">
+          <p class="stem">Does the price include taxes? <em>Would you mind telling me</em></p>
+          <textarea class="ex-answer" id="e1q7" name="e1q7" placeholder="Would you mind telling me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex1)">8</div>
+        <div class="ex-content">
+          <p class="stem">Where do I need to sign? <em>I'm not sure</em></p>
+          <textarea class="ex-answer" id="e1q8" name="e1q8" placeholder="I'm not sure …"></textarea>
+        </div>
+      </div>
+      <p class="act-autosave">✦ Your answers are saved automatically as you type.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 2
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex2">
+    <div class="exercise-head" style="background:var(--ex2)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 2 · Error Correction</span>
+        <h3>Spot and Correct the Mistakes</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t2',10)">▶ Start (10 min)</button>
+        <div class="timer-display" id="t2"></div>
+        <span class="ex-group">~10 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">Each sentence contains ONE mistake. Underline the error mentally, then write the corrected version in the box.</p>
+
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">1</div>
+        <div class="ex-content">
+          <p class="stem">Could you tell me <u>where is the luggage carousel?</u></p>
+          <textarea class="ex-answer" id="e2q1" name="e2q1" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">2</div>
+        <div class="ex-content">
+          <p class="stem">Do you know <u>what time does the museum open?</u></p>
+          <textarea class="ex-answer" id="e2q2" name="e2q2" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">3</div>
+        <div class="ex-content">
+          <p class="stem"><u>I was wondering if could you help me</u> with this form.</p>
+          <textarea class="ex-answer" id="e2q3" name="e2q3" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">4</div>
+        <div class="ex-content">
+          <p class="stem">Can you tell me <u>whether is there a vegetarian menu?</u></p>
+          <textarea class="ex-answer" id="e2q4" name="e2q4" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">5</div>
+        <div class="ex-content">
+          <p class="stem">Do you have any idea <u>how much does this upgrade cost.</u></p>
+          <textarea class="ex-answer" id="e2q5" name="e2q5" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex2)">6</div>
+        <div class="ex-content">
+          <p class="stem">I'd like to know <u>when will the results be published?</u></p>
+          <textarea class="ex-answer" id="e2q6" name="e2q6" placeholder="Corrected version: …"></textarea>
+        </div>
+      </div>
+      <p class="act-autosave">✦ Your answers are saved automatically as you type.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 3 — MULTIPLE CHOICE (auto-feedback)
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex3">
+    <div class="exercise-head" style="background:var(--ex3)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 3 · Multiple Choice · Instant feedback</span>
+        <h3>Choose the Correct Indirect Question</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t3',8)">▶ Start (8 min)</button>
+        <div class="timer-display" id="t3"></div>
+        <span class="ex-group">~8 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">Click on the letter of the correct indirect question. You will get instant feedback. Your choice is recorded automatically.</p>
+
+      <!-- Q1 -->
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex3)">1</div>
+        <div class="ex-content">
+          <p class="stem">The guest asks politely: "What is the Wi-Fi password?"</p>
+          <input type="hidden" name="e3q1" id="e3q1" value="">
+          <div class="mc-options" id="mc3_1">
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_1',this,'b','e3q1')"><span class="mc-letter">a</span>Could you tell me what is the Wi-Fi password?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_1',this,'b','e3q1')"><span class="mc-letter">b</span>Could you tell me what the Wi-Fi password is?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_1',this,'b','e3q1')"><span class="mc-letter">c</span>Could you tell me what the Wi-Fi password was?</button>
+          </div>
+          <div class="mc-feedback" id="fb3_1"></div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex3)">2</div>
+        <div class="ex-content">
+          <p class="stem">The customer asks: "Is the item in stock?"</p>
+          <input type="hidden" name="e3q2" id="e3q2" value="">
+          <div class="mc-options" id="mc3_2">
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_2',this,'a','e3q2')"><span class="mc-letter">a</span>I was wondering if the item is in stock.</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_2',this,'a','e3q2')"><span class="mc-letter">b</span>I was wondering if is the item in stock.</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_2',this,'a','e3q2')"><span class="mc-letter">c</span>I was wondering whether is the item in stock.</button>
+          </div>
+          <div class="mc-feedback" id="fb3_2"></div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex3)">3</div>
+        <div class="ex-content">
+          <p class="stem">The patient asks: "How long will I wait?"</p>
+          <input type="hidden" name="e3q3" id="e3q3" value="">
+          <div class="mc-options" id="mc3_3">
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_3',this,'b','e3q3')"><span class="mc-letter">a</span>Do you have any idea how long will I wait?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_3',this,'b','e3q3')"><span class="mc-letter">b</span>Do you have any idea how long I will wait?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_3',this,'b','e3q3')"><span class="mc-letter">c</span>Do you have any idea how long do I wait?</button>
+          </div>
+          <div class="mc-feedback" id="fb3_3"></div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex3)">4</div>
+        <div class="ex-content">
+          <p class="stem">The traveller asks: "Does the train go directly to the airport?"</p>
+          <input type="hidden" name="e3q4" id="e3q4" value="">
+          <div class="mc-options" id="mc3_4">
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_4',this,'a','e3q4')"><span class="mc-letter">a</span>Could you tell me if the train goes directly to the airport?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_4',this,'a','e3q4')"><span class="mc-letter">b</span>Could you tell me whether goes the train directly to the airport?</button>
+            <button type="button" class="mc-btn" onclick="checkMC('mc3_4',this,'a','e3q4')"><span class="mc-letter">c</span>Could you tell me if does the train go directly to the airport?</button>
+          </div>
+          <div class="mc-feedback" id="fb3_4"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 4 — FILL IN THE BLANK (auto-feedback)
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex4">
+    <div class="exercise-head" style="background:var(--ex4)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 4 · Fill in the Blank · Instant feedback</span>
+        <h3>Complete the Indirect Questions</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t4',8)">▶ Start (8 min)</button>
+        <div class="timer-display" id="t4"></div>
+        <span class="ex-group">~8 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">Fill in each gap with ONE word to complete the indirect question correctly. Click <strong>Check my answers</strong> when you are done.</p>
+
+      <!-- Items -->
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">1</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">Do you know</span>
+            <input type="text" class="fib-input" id="fib1" name="fib1" data-answer="what" placeholder="___">
+            <span class="fib-stem">time the next train leaves?</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">2</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">Could you tell me</span>
+            <input type="text" class="fib-input" id="fib2" name="fib2" data-answer="where" placeholder="___">
+            <span class="fib-stem">the conference room is?</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">3</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">I was wondering</span>
+            <input type="text" class="fib-input" id="fib3" name="fib3" data-answer="if,whether" placeholder="___">
+            <span class="fib-stem">you could arrange a wake-up call.</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">4</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">I'd like to know</span>
+            <input type="text" class="fib-input" id="fib4" name="fib4" data-answer="whether,if" placeholder="___">
+            <span class="fib-stem">the repairs will take long.</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">5</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">Would you mind telling me</span>
+            <input type="text" class="fib-input" id="fib5" name="fib5" data-answer="how" placeholder="___">
+            <span class="fib-stem">many guests are expected?</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">6</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">Do you have any idea</span>
+            <input type="text" class="fib-input" id="fib6" name="fib6" data-answer="how" placeholder="___">
+            <span class="fib-stem">much a single room costs per night?</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">7</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">Can you tell me</span>
+            <input type="text" class="fib-input" id="fib7" name="fib7" data-answer="whether,if" placeholder="___">
+            <span class="fib-stem">the gym is open on weekends?</span>
+          </div>
+        </div>
+      </div>
+      <div class="ex-item"><div class="ex-num" style="background:var(--ex4)">8</div>
+        <div class="ex-content">
+          <div class="fib-wrap">
+            <span class="fib-stem">I'm not sure</span>
+            <input type="text" class="fib-input" id="fib8" name="fib8" data-answer="whether,if" placeholder="___">
+            <span class="fib-stem">I should go to Terminal 1 or Terminal 2.</span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="check-btn" onclick="checkFIB()">✓ Check my answers</button>
+      <input type="hidden" name="e4_score" id="e4_score" value="">
+      <p class="act-autosave" style="margin-top:.8rem">✦ Your answers are recorded and will be included in your submission.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 5 — HOTEL DIALOGUE
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex5">
+    <div class="exercise-head" style="background:var(--ex5)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 5 · Grammar in Context</span>
+        <h3>Hotel Check-In Dialogue</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t5',15)">▶ Start (15 min)</button>
+        <div class="timer-display" id="t5"></div>
+        <span class="ex-group">~15 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">Read the dialogue. Some of the guest's questions are too direct. Rewrite the underlined questions using a more polite, indirect form. Keep the meaning the same.</p>
+
+      <div class="card" style="background:var(--cream);margin-bottom:1.5rem">
+        <p style="font-size:.82rem;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">Hotel Dialogue</p>
+        <p><strong>Receptionist:</strong> Good afternoon, welcome to the Grand View Hotel. How can I help you?</p>
+        <p style="margin-top:.5rem"><strong>Guest:</strong> Good afternoon. I have a reservation. <u>(1) Where is my room?</u></p>
+        <p style="margin-top:.5rem"><strong>Receptionist:</strong> Of course! Let me find your reservation. May I have your name?</p>
+        <p style="margin-top:.5rem"><strong>Guest:</strong> Yes, it's Martinson. Also, <u>(2) is breakfast included in the price?</u></p>
+        <p style="margin-top:.5rem"><strong>Receptionist:</strong> Yes, breakfast is served from 7 to 10 am in the rooftop restaurant.</p>
+        <p style="margin-top:.5rem"><strong>Guest:</strong> Great! <u>(3) What time does the pool close?</u></p>
+        <p style="margin-top:.5rem"><strong>Receptionist:</strong> The pool closes at 10 pm, sir.</p>
+        <p style="margin-top:.5rem"><strong>Guest:</strong> Thank you. And <u>(4) can I get a late check-out?</u></p>
+        <p style="margin-top:.5rem"><strong>Receptionist:</strong> I'll check that for you. It depends on availability.</p>
+        <p style="margin-top:.5rem"><strong>Guest:</strong> Perfect. One last thing — <u>(5) where do I park my car?</u></p>
+        <p style="margin-top:.5rem"><strong>Receptionist:</strong> The underground car park is accessed from the side entrance on Elm Street.</p>
+      </div>
+
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex5)">1</div>
+        <div class="ex-content">
+          <p class="prompt">Rewrite: "Where is my room?" — more politely:</p>
+          <textarea class="ex-answer" id="e5q1" name="e5q1" placeholder="Could you tell me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex5)">2</div>
+        <div class="ex-content">
+          <p class="prompt">Rewrite: "Is breakfast included in the price?" — more politely:</p>
+          <textarea class="ex-answer" id="e5q2" name="e5q2" placeholder="I was wondering …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex5)">3</div>
+        <div class="ex-content">
+          <p class="prompt">Rewrite: "What time does the pool close?" — more politely:</p>
+          <textarea class="ex-answer" id="e5q3" name="e5q3" placeholder="Do you know …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex5)">4</div>
+        <div class="ex-content">
+          <p class="prompt">Rewrite: "Can I get a late check-out?" — more politely:</p>
+          <textarea class="ex-answer" id="e5q4" name="e5q4" placeholder="I'd like to know …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex5)">5</div>
+        <div class="ex-content">
+          <p class="prompt">Rewrite: "Where do I park my car?" — more politely:</p>
+          <textarea class="ex-answer" id="e5q5" name="e5q5" placeholder="Could you tell me …?"></textarea>
+        </div>
+      </div>
+      <p class="act-autosave">✦ Your answers are saved automatically as you type.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       EXERCISE 6 — GUIDED WRITING
+  ═══════════════════════════════════════════════════ -->
+  <div class="exercise" id="ex6">
+    <div class="exercise-head" style="background:var(--ex6)">
+      <div>
+        <span class="ex-label" style="color:rgba(248,245,239,.65)">Exercise 6 · Guided Writing</span>
+        <h3>Roleplay Preparation — Tourism Office</h3>
+      </div>
+      <div class="ex-meta">
+        <button type="button" class="ex-timer-btn" onclick="startTimer('t6',15)">▶ Start (15 min)</button>
+        <div class="timer-display" id="t6"></div>
+        <span class="ex-group">~15 minutes</span>
+      </div>
+    </div>
+    <div class="exercise-body">
+      <p class="ex-instructions">You are visiting a new city and calling a tourism office. Write 6 indirect questions to ask the operator. Use a <strong>different introducing phrase</strong> for each question. Think about information you would genuinely want to know: transport, accommodation, opening hours, prices, local tips, etc.</p>
+
+      <div class="tip-box">
+        <strong>Example:</strong> Could you tell me what the best way to get to the old town is?
+      </div>
+
+      <div class="ex-item" style="margin-top:1.2rem">
+        <div class="ex-num" style="background:var(--ex6)">1</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>Could you tell me…?</em></p>
+          <textarea class="ex-answer" id="e6q1" name="e6q1" placeholder="Could you tell me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex6)">2</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>Do you know…?</em></p>
+          <textarea class="ex-answer" id="e6q2" name="e6q2" placeholder="Do you know …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex6)">3</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>I was wondering…</em></p>
+          <textarea class="ex-answer" id="e6q3" name="e6q3" placeholder="I was wondering …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex6)">4</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>I'd like to know…</em></p>
+          <textarea class="ex-answer" id="e6q4" name="e6q4" placeholder="I'd like to know …"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex6)">5</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>Would you mind telling me…?</em></p>
+          <textarea class="ex-answer" id="e6q5" name="e6q5" placeholder="Would you mind telling me …?"></textarea>
+        </div>
+      </div>
+      <div class="ex-item">
+        <div class="ex-num" style="background:var(--ex6)">6</div>
+        <div class="ex-content">
+          <p class="prompt">Use: <em>Do you have any idea…?</em> or <em>I'm not sure…</em></p>
+          <textarea class="ex-answer" id="e6q6" name="e6q6" placeholder="Do you have any idea …?  /  I'm not sure …"></textarea>
+        </div>
+      </div>
+      <p class="act-autosave">✦ Your answers are saved automatically as you type.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       SELF-EVALUATION
+  ═══════════════════════════════════════════════════ -->
+  <section id="selfeval">
+    <div class="section-head">
+      <span class="section-badge" style="background:var(--navy)">Part 3</span>
+      <h2>Self-Evaluation</h2>
+    </div>
+
+    <div class="self-eval">
+      <h3>I can … <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:400;color:var(--text-muted)">Click an emoji for each skill</span></h3>
+
+      <div class="eval-item">
+        <span class="eval-text">explain why we use indirect questions.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval1','😊')" title="I can do this well">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval1','😐')" title="I'm not sure">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval1','😕')" title="I need more practice">😕</button>
+        </div>
+        <input type="hidden" name="eval1" id="eval1" value="">
+      </div>
+      <div class="eval-item">
+        <span class="eval-text">use the correct word order (statement order) in indirect questions.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval2','😊')">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval2','😐')">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval2','😕')">😕</button>
+        </div>
+        <input type="hidden" name="eval2" id="eval2" value="">
+      </div>
+      <div class="eval-item">
+        <span class="eval-text">add <em>if</em> or <em>whether</em> for yes/no indirect questions.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval3','😊')">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval3','😐')">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval3','😕')">😕</button>
+        </div>
+        <input type="hidden" name="eval3" id="eval3" value="">
+      </div>
+      <div class="eval-item">
+        <span class="eval-text">choose appropriate introducing phrases.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval4','😊')">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval4','😐')">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval4','😕')">😕</button>
+        </div>
+        <input type="hidden" name="eval4" id="eval4" value="">
+      </div>
+      <div class="eval-item">
+        <span class="eval-text">use past tense forms to sound extra polite.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval5','😊')">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval5','😐')">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval5','😕')">😕</button>
+        </div>
+        <input type="hidden" name="eval5" id="eval5" value="">
+      </div>
+      <div class="eval-item">
+        <span class="eval-text">use indirect questions naturally in a conversation.</span>
+        <div class="eval-emojis">
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval6','😊')">😊</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval6','😐')">😐</button>
+          <button type="button" class="eval-emoji" onclick="selectEmoji(this,'eval6','😕')">😕</button>
+        </div>
+        <input type="hidden" name="eval6" id="eval6" value="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ANSWER KEY -->
+  <div class="answer-key" id="answerKey">
+    <div class="ak-head" onclick="toggleAK()">
+      <div class="ak-icon">🔑</div>
+      <h3>Answer Key — click to reveal</h3>
+      <span class="ak-arrow">▼</span>
+    </div>
+    <div class="ak-body">
+      <div class="ak-section">
+        <h4>Exercise 1</h4>
+        <ol>
+          <li><code>Could you tell me where the check-in desk is?</code></li>
+          <li><code>Do you know what time the tour starts?</code></li>
+          <li><code>I was wondering if / whether there is a pharmacy near here.</code></li>
+          <li><code>Do you have any idea how much a return ticket costs?</code></li>
+          <li><code>I'd like to know if / whether I can change my reservation.</code></li>
+          <li><code>Could you tell me how long the flight will be delayed?</code></li>
+          <li><code>Would you mind telling me if / whether the price includes taxes?</code></li>
+          <li><code>I'm not sure where I need to sign.</code></li>
+        </ol>
+      </div>
+      <div class="ak-section">
+        <h4>Exercise 2</h4>
+        <ol>
+          <li><code>Could you tell me where the luggage carousel is?</code></li>
+          <li><code>Do you know what time the museum opens?</code></li>
+          <li><code>I was wondering if you could help me with this form.</code></li>
+          <li><code>Can you tell me whether there is a vegetarian menu?</code></li>
+          <li><code>Do you have any idea how much this upgrade costs.</code> (full stop)</li>
+          <li><code>I'd like to know when the results will be published.</code> (full stop, statement order)</li>
+        </ol>
+      </div>
+      <div class="ak-section">
+        <h4>Exercise 3</h4>
+        <ol><li>b</li><li>a</li><li>b</li><li>a</li></ol>
+      </div>
+      <div class="ak-section">
+        <h4>Exercise 4</h4>
+        <ol><li>what</li><li>where</li><li>if / whether</li><li>whether / if</li><li>how</li><li>how</li><li>whether / if</li><li>whether</li></ol>
+      </div>
+      <div class="ak-section">
+        <h4>Exercise 5 (suggested answers)</h4>
+        <ol>
+          <li><code>Could you tell me where my room is?</code></li>
+          <li><code>I was wondering if / whether breakfast is included in the price.</code></li>
+          <li><code>Do you know what time the pool closes?</code></li>
+          <li><code>I'd like to know if / whether I can get a late check-out.</code></li>
+          <li><code>Could you tell me where I park / should park my car?</code></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-panel">
+    <h3>Ready to submit?</h3>
+    <p>Make sure you have completed all six exercises and the self-evaluation. Click the button below to send your answers to your teacher.</p>
+    <div class="submit-actions">
+      <button type="submit" class="btn-submit" id="submitBtn">📨 Submit my answers</button>
+      <button type="button" class="btn-export-sec" onclick="exportAnswers()">⬇ Download copy (.txt)</button>
+    </div>
+    <div class="submit-error" id="submitError">Please fill in your name, student ID and email before submitting.</div>
+    <p class="submit-note">Your answers will be sent directly to your teacher. Submission is final.</p>
+  </div>
+
+</form>
+</main>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ─── PROGRESS BAR ──────────────────────────────────
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('progress').style.width=pct+'%';
+  document.getElementById('backTop').classList.toggle('visible',h.scrollTop>400);
+});
+
+// ─── ACTIVE NAV ────────────────────────────────────
+const sections=['intro','grammar','ex1','ex2','ex3','ex4','ex5','ex6','selfeval'];
+window.addEventListener('scroll',()=>{
+  const st=window.scrollY+100;
+  for(let i=sections.length-1;i>=0;i--){
+    const el=document.getElementById(sections[i]);
+    if(el&&el.offsetTop<=st){
+      document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+      const t=document.querySelector(`.nav-item[href="#${sections[i]}"]`);
+      if(t)t.classList.add('active');
+      break;
+    }
+  }
+});
+
+// ─── TIMERS ─────────────────────────────────────────
+const timers={};
+function startTimer(id,minutes){
+  if(timers[id])clearInterval(timers[id].interval);
+  let total=minutes*60;
+  const display=document.getElementById(id);
+  display.style.display='block';
+  timers[id]={interval:setInterval(()=>{
+    total--;
+    const m=Math.floor(total/60),s=total%60;
+    display.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    if(total<=0){clearInterval(timers[id].interval);display.textContent='⏰ Time is up!';display.style.color='#EF4444'}
+    if(total===60)display.style.color='#F59E0B';
+  },1000)};
+}
+
+// ─── MULTIPLE CHOICE ────────────────────────────────
+function checkMC(groupId,btn,correctLetter,hiddenId){
+  const container=document.getElementById(groupId);
+  const buttons=container.querySelectorAll('.mc-btn');
+  const feedback=document.getElementById('fb'+groupId.replace('mc',''));
+  // Already answered?
+  if(container.dataset.answered==='true')return;
+  container.dataset.answered='true';
+  buttons.forEach(b=>b.disabled=true);
+  const letters=['a','b','c','d','e','f'];
+  const clickedLetter=letters[Array.from(buttons).indexOf(btn)];
+  if(clickedLetter===correctLetter){
+    btn.classList.add('correct');
+    feedback.textContent='✓ Correct!';
+    feedback.className='mc-feedback ok';
+    feedback.style.display='block';
+    document.getElementById(hiddenId).value=correctLetter+' (correct)';
+  } else {
+    btn.classList.add('wrong-pick');
+    buttons[letters.indexOf(correctLetter)].classList.add('reveal-correct');
+    feedback.textContent='✗ Not quite. The correct answer is highlighted in green.';
+    feedback.className='mc-feedback err';
+    feedback.style.display='block';
+    document.getElementById(hiddenId).value=clickedLetter+' (incorrect — correct: '+correctLetter+')';
+  }
+  saveAll();
+}
+
+// ─── FILL IN THE BLANK ──────────────────────────────
+function checkFIB(){
+  const fibs=[
+    {id:'fib1',answers:['what']},
+    {id:'fib2',answers:['where']},
+    {id:'fib3',answers:['if','whether']},
+    {id:'fib4',answers:['whether','if']},
+    {id:'fib5',answers:['how']},
+    {id:'fib6',answers:['how']},
+    {id:'fib7',answers:['whether','if']},
+    {id:'fib8',answers:['whether','if']},
+  ];
+  let correct=0;
+  fibs.forEach(f=>{
+    const el=document.getElementById(f.id);
+    const val=el.value.trim().toLowerCase();
+    el.classList.remove('correct','wrong');
+    // Remove old hint
+    const oldHint=el.parentNode.querySelector('.fib-hint');
+    if(oldHint)oldHint.remove();
+    if(f.answers.includes(val)){
+      el.classList.add('correct');
+      correct++;
+      const hint=document.createElement('span');
+      hint.className='fib-hint ok';hint.textContent='✓';
+      el.parentNode.appendChild(hint);
+    } else if(val!==''){
+      el.classList.add('wrong');
+      const hint=document.createElement('span');
+      hint.className='fib-hint err';hint.textContent='✗';
+      el.parentNode.appendChild(hint);
+    }
+    // Save to hidden
+    localStorage.setItem('iq_'+f.id, val);
+  });
+  document.getElementById('e4_score').value=`${correct}/8`;
+  saveAll();
+}
+
+// ─── SELF EVALUATION ────────────────────────────────
+function selectEmoji(btn,fieldId,value){
+  const parent=btn.closest('.eval-emojis');
+  parent.querySelectorAll('.eval-emoji').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById(fieldId).value=value;
+  localStorage.setItem('iq_'+fieldId,value);
+}
+
+// ─── ANSWER KEY ──────────────────────────────────────
+function toggleAK(){
+  document.getElementById('answerKey').classList.toggle('open');
+}
+
+// ─── LOCALSTORAGE AUTO-SAVE ──────────────────────────
+const textIds=['e1q1','e1q2','e1q3','e1q4','e1q5','e1q6','e1q7','e1q8',
+               'e2q1','e2q2','e2q3','e2q4','e2q5','e2q6',
+               'e5q1','e5q2','e5q3','e5q4','e5q5',
+               'e6q1','e6q2','e6q3','e6q4','e6q5','e6q6'];
+const fibIds=['fib1','fib2','fib3','fib4','fib5','fib6','fib7','fib8'];
+const studentIds=['nombre','carnet','email'];
+const allSaveIds=[...textIds,...fibIds,...studentIds,'e3q1','e3q2','e3q3','e3q4',
+                  'eval1','eval2','eval3','eval4','eval5','eval6','e4_score'];
+
+function saveAll(){
+  allSaveIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)localStorage.setItem('iq_'+id,el.value);
+  });
+}
+
+function loadAll(){
+  textIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){const v=localStorage.getItem('iq_'+id);if(v)el.value=v;}
+  });
+  fibIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){const v=localStorage.getItem('iq_'+id);if(v)el.value=v;}
+  });
+  studentIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){const v=localStorage.getItem('iq_'+id);if(v)el.value=v;}
+  });
+  // Eval emojis
+  ['eval1','eval2','eval3','eval4','eval5','eval6'].forEach(id=>{
+    const v=localStorage.getItem('iq_'+id);
+    const hidden=document.getElementById(id);
+    if(v&&hidden){
+      hidden.value=v;
+      // Re-highlight the button
+      const items=hidden.closest('.eval-item');
+      if(items){
+        items.querySelectorAll('.eval-emoji').forEach(btn=>{
+          if(btn.textContent===v)btn.classList.add('selected');
+        });
+      }
+    }
+  });
+  // Score
+  const sc=localStorage.getItem('iq_e4_score');
+  if(sc)document.getElementById('e4_score').value=sc;
+}
+
+// Auto-save on input
+[...textIds,...fibIds,...studentIds].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',saveAll);
+});
+
+window.addEventListener('load',loadAll);
+
+// ─── FORM SUBMISSION ─────────────────────────────────
+document.getElementById('mainForm').addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const err=document.getElementById('submitError');
+  const btn=document.getElementById('submitBtn');
+  const nombre=document.getElementById('nombre').value.trim();
+  const carnet=document.getElementById('carnet').value.trim();
+  const email=document.getElementById('email').value.trim();
+  if(!nombre||!carnet||!email){
+    err.style.display='block';
+    document.getElementById('nombre').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  err.style.display='none';
+  btn.disabled=true;btn.textContent='⏳ Sending…';
+  const formData=new FormData(document.getElementById('mainForm'));
+  try{
+    const response=await fetch('https://formspree.io/f/xlgaqqnl',{
+      method:'POST',headers:{'Accept':'application/json'},body:formData
+    });
+    if(response.ok){
+      allSaveIds.forEach(id=>localStorage.removeItem('iq_'+id));
+      document.getElementById('successName').textContent=nombre;
+      document.getElementById('successScreen').classList.add('visible');
+      window.scrollTo({top:0,behavior:'smooth'});
+    } else {
+      throw new Error('Server error '+response.status);
+    }
+  }catch(er){
+    btn.disabled=false;btn.textContent='📨 Submit my answers';
+    err.textContent='There was a problem sending. Please download your .txt copy and send it to your teacher by email.';
+    err.style.display='block';
+  }
+});
+
+// ─── EXPORT ──────────────────────────────────────────
+function exportAnswers(){
+  const nombre=document.getElementById('nombre')?.value?.trim()||'(no name)';
+  const carnet=document.getElementById('carnet')?.value?.trim()||'—';
+  const email=document.getElementById('email')?.value?.trim()||'—';
+  const fibScore=document.getElementById('e4_score')?.value||'not checked';
+  let txt='INDIRECT QUESTIONS · ENGLISH IV · TOURISM UMSA\n';
+  txt+='='.repeat(55)+'\n';
+  txt+=`Student  : ${nombre}\n`;
+  txt+=`ID       : ${carnet}\n`;
+  txt+=`Email    : ${email}\n`;
+  txt+=`Exported : ${new Date().toLocaleString('es-BO')}\n`;
+  txt+='='.repeat(55)+'\n\n';
+  const sections=[
+    {h:'EXERCISE 1 — Rewrite Direct Questions',ids:['e1q1','e1q2','e1q3','e1q4','e1q5','e1q6','e1q7','e1q8']},
+    {h:'EXERCISE 2 — Error Correction',ids:['e2q1','e2q2','e2q3','e2q4','e2q5','e2q6']},
+    {h:'EXERCISE 3 — Multiple Choice',ids:['e3q1','e3q2','e3q3','e3q4']},
+    {h:'EXERCISE 4 — Fill in the Blank (Score: '+fibScore+')',ids:['fib1','fib2','fib3','fib4','fib5','fib6','fib7','fib8']},
+    {h:'EXERCISE 5 — Hotel Dialogue',ids:['e5q1','e5q2','e5q3','e5q4','e5q5']},
+    {h:'EXERCISE 6 — Roleplay Writing',ids:['e6q1','e6q2','e6q3','e6q4','e6q5','e6q6']},
+  ];
+  sections.forEach(s=>{
+    txt+=s.h+'\n'+'-'.repeat(45)+'\n';
+    s.ids.forEach((id,i)=>{
+      const val=document.getElementById(id)?.value?.trim()||(localStorage.getItem('iq_'+id)||'(no answer)');
+      txt+=`  ${i+1}. ${val}\n`;
+    });
+    txt+='\n';
+  });
+  txt+='SELF-EVALUATION\n'+'-'.repeat(45)+'\n';
+  const skills=['explain why we use indirect questions','word order (statement order)','if / whether for yes/no','introducing phrases','past tense for politeness','natural use in conversation'];
+  skills.forEach((sk,i)=>{
+    const v=document.getElementById('eval'+(i+1))?.value||'—';
+    txt+=`  ${v}  ${sk}\n`;
+  });
+  const blob=new Blob([txt],{type:'text/plain;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=`indirect_questions_${nombre.replace(/\s+/g,'_')}.txt`;
+  a.click();URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
